@@ -1,3 +1,14 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    position: relative;
+}
+
+
 button {
     border: none;
     color: #090C02;
@@ -68,4 +79,38 @@ p {
     align-items: center;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+#centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.matchstick {
+    height: 150px;
+    margin: 0 15px 10px 0; 
+}
+
+.remove-match {
+    all: unset;
+    height: 30%;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
