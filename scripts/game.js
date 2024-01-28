@@ -2,17 +2,46 @@ let currentPlayer = 1;
 let board = [];
 let playerNames = [];
 let activeRow = null;
+let difficultyChosen = "";
+const player1 = document.getElementById('username1');
+const player2 = document.getElementById('username2');
+const versus = document.getElementById('versus');
+
+function goToHome() {
+    window.location.href = "home.html";
+}
+
+function goToSetup() {
+    window.location.href = "setup.html";
+}
+
+function goToInstructions() {
+    window.location.href = "instructions.html";
+}
+
+function Easy() {
+    difficultyChosen = "Easy"
+    playerNames[0] = player1.value;
+    playerNames[1] = player2.value;
+    window.location.href = "game.html";
+}
+function Medium() {
+    difficultyChosen = "Medium"
+    playerNames[0] = player1.value;
+    playerNames[1] = player2.value;
+    window.location.href = "game.html";
+}
+function Hard() {
+    difficultyChosen = "Hard"
+    playerNames[0] = player1.value;
+    playerNames[1] = player2.value;
+    window.location.href = "game.html";
+}
 
 function startGame() {
     activeRow = null;
-    playerNames[0] = "test1"
-    //prompt("Enter name for Player 1") || 'Player 1';
-    playerNames[1] = "test"
-    //prompt("Enter name for Player 2") || 'Player 2';
-
-    let difficulty = "Medium"
-    //prompt("Choose difficulty: Easy, Medium, Hard") || 'Easy';
-    initializeBoard(difficulty);
+    versus.textContent = playerNames[0] + " vs " + playerNames[1];
+    initializeBoard(difficultyChosen);
     updateBoardDisplay();
 }
 

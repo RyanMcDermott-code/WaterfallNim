@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link href="../css/main.css" rel="stylesheet">
-    <script src="../scripts/setup.js" defer></script>
+    <script src="../scripts/game.js" defer></script>
 </head>
 <html>
     <title>Home Page</title>
@@ -11,9 +11,9 @@
         <h1 style="text-align: center; color: #A72608;">NIM</h1>
     </head>
     <body>
-        <button id="instruction" type="button" class="top-right">Instructions</button>
+        <button type="button" class="top-right" onclick="goToInstructions()">Instructions</button>
 
-        <button id="game" type="button" class="center">Play Game</button>
+        <button class="button" onclick="goToSetup()">Play Game</button>
         <footer>&copy; Group 5</footer>
     <body>
 </html>

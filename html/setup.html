@@ -1,10 +1,10 @@
 <head>
     <link href="../css/main.css" rel="stylesheet">
-    <script src="../scripts/setup.js" defer></script>
+    <script src="../scripts/game.js" defer></script>
 </head>
     <body id="body2">
         <header>
-            <button type="button" >Back</button>
+            <button class="button" onclick="goToHome()">Back</button>
         </header>
         <main id="screen">
                 <label for="username1">Enter Player 1 username</label>
@@ -13,11 +13,11 @@
                 <input type="text" id="username2" name="username2"><br><br>
                 <label>Select  the difficulty to start</label>
                 <br>
-                <button id="Easy" type="button">Easy(1,3,5)</button>
+                <button id="Easy" type="button" onclick="Easy()">Easy(1,3,5)</button>
                 <br>
-                <button id="Medium" type="button">Medium(1,3,5,7)</button>
+                <button id="Medium" type="button" onclick="Medium()">Medium(1,3,5,7)</button>
                 <br>
-                <button id="Hard" type="button">Hard(3,5,7,9,11)</button>
+                <button id="Hard" type="button" onclick="Hard()">Hard(3,5,7,9,11)</button>
             </main>
             <footer>&copy; Group5</footer>
         </body>
