@@ -1,8 +1,7 @@
 let currentPlayer = 1;
 let board = [];
-let playerNames = [];
 let activeRow = null;
-let difficultyChosen = "";
+let playerNames = [];
 const player1 = document.getElementById('username1');
 const player2 = document.getElementById('username2');
 const versus = document.getElementById('versus');
@@ -20,28 +19,30 @@ function goToInstructions() {
 }
 
 function Easy() {
-    difficultyChosen = "Easy"
-    playerNames[0] = player1.value;
-    playerNames[1] = player2.value;
+    localStorage.setItem('player1', player1.value);
+    localStorage.setItem('player2', player2.value);
+    localStorage.setItem('difficultyChosen', "Easy");
     window.location.href = "game.html";
 }
 function Medium() {
-    difficultyChosen = "Medium"
-    playerNames[0] = player1.value;
-    playerNames[1] = player2.value;
+    localStorage.setItem('player1', player1.value);
+    localStorage.setItem('player2', player2.value);
+    localStorage.setItem('difficultyChosen', "Medium");
     window.location.href = "game.html";
 }
 function Hard() {
-    difficultyChosen = "Hard"
-    playerNames[0] = player1.value;
-    playerNames[1] = player2.value;
+    localStorage.setItem('player1', player1.value);
+    localStorage.setItem('player2', player2.value);
+    localStorage.setItem('difficultyChosen', "Hard");
     window.location.href = "game.html";
 }
 
 function startGame() {
     activeRow = null;
+    playerNames[0] = localStorage.getItem('player1');
+    playerNames[1] = localStorage.getItem('player2');
     versus.textContent = playerNames[0] + " vs " + playerNames[1];
-    initializeBoard(difficultyChosen);
+    initializeBoard(localStorage.getItem('difficultyChosen'));
     updateBoardDisplay();
 }
 
@@ -110,6 +111,6 @@ function endTurn() {
     currentPlayer = 3 - currentPlayer;
 }
 
-window.onload = function() {
+window.onload = function () {
     startGame();
 }

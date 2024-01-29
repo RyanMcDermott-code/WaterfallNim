@@ -1,7 +1,11 @@
 
 header {
+    color: #090C02;
+}
+#gameHeader{
     display: flex;
     justify-content: space-between;
+    color: #090C02;
 }
 
 .button {
